@@ -18,12 +18,13 @@ The up and running app can be found [here](https://barongello.dev/dotnet-entity-
 
 Despite being a simple application, I separated many CSS properties into variables and splitted the React code into separate componentes
 
-## How to run
+## How to deploy
 
 1. Install Docker
 2. Clone this repository
 3. Run `./build_and_run.sh`
 4. Configure NGINX
+5. Access `https://<server>/dotnet-entity-react/` in the browser
 
 The server will be running in the port `20001`
 
@@ -67,3 +68,13 @@ Change `<server>` to the real host (i.e. example.com)
 Change `<fullchain.pem>` to the path of the `fullchain.pem` file
 
 Change the `<privkey.pem>` to the path of the `privkey.pem`
+
+## How to run in dev mode
+
+1. Install .NET SDK 10
+2. Install Node.js + NPM
+3. Clone this repository
+4. Open a terminal and run `dotnet run` inside the root folder
+5. Open a terminal and run `npm install` inside the `todo-frontend` folder
+6. Inside the last terminal run `npm run dev` inside the `todo-frontend` folder
+7. Access `http://localhost:5173/` in the browser
