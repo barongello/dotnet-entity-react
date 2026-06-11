@@ -1,5 +1,4 @@
 using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.HttpOverrides;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,14 +8,6 @@ builder.Services.AddDbContext<AppDbContext>(
 
 var app = builder.Build();
 
-app.UseForwardedHeaders(
-    new ForwardedHeadersOptions
-    {
-        ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
-    }
-);
-
-app.UsePathBase("/dotnet-entity-react");
 app.UseDefaultFiles();
 app.UseStaticFiles();
 app.UseRouting();

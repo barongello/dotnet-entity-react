@@ -12,7 +12,7 @@ Todo App built as an example to showcase some skills. It is using:
 
 ## Online version
 
-The up and running app can be found [here](https://barongello.dev/dotnet-entity-react)
+The up and running app can be found [here](https://barongello.dev/dotnet-entity-react/)
 
 ## Disclaimer
 
@@ -27,7 +27,7 @@ Despite being a simple application, I separated many CSS properties into variabl
 
 The server will be running in the port `20001`
 
-It will be running under `/dotnet-entity-react` subfolder
+It will be running under `/dotnet-entity-react/` subfolder
 
 Here is the NGINX configuration:
 
@@ -48,8 +48,8 @@ server {
     ssl_protocols TLSv1.2 TLSv1.3;
     ssl_ciphers HIGH:!aNULL:!MD5;
 
-    location /dotnet-entity-react {
-        proxy_pass http://127.0.0.1:20001;
+    location /dotnet-entity-react/ {
+        proxy_pass http://127.0.0.1:20001/;
         proxy_http_version 1.1;
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection keep-alive;

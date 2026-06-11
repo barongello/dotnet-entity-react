@@ -27,7 +27,7 @@ export default function App() {
 
   const fetchTodos = async signal => {
     try {
-      const response = await fetch(`${import.meta.env.BASE_URL}api/todos`, { signal });
+      const response = await fetch('api/todos', { signal });
 
       if (response.ok === true) {
         const data = await response.json();
@@ -60,7 +60,7 @@ export default function App() {
     };
 
     try {
-      const response = await fetch(`${import.meta.env.BASE_URL}api/todos`, {
+      const response = await fetch('api/todos', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -90,7 +90,7 @@ export default function App() {
     };
 
     try {
-      const response = await fetch(`${import.meta.env.BASE_URL}api/todos/${todo.id}`, {
+      const response = await fetch(`api/todos/${todo.id}`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json'
@@ -113,7 +113,7 @@ export default function App() {
 
   const deleteTodo = async id => {
     try {
-      const response = await fetch(`${import.meta.env.BASE_URL}api/todos/${id}`, {
+      const response = await fetch(`api/todos/${id}`, {
         method: 'DELETE'
       });
 
@@ -138,7 +138,7 @@ export default function App() {
     };
 
     try {
-      const response = await fetch(`${import.meta.env.BASE_URL}api/todos/${id}`, {
+      const response = await fetch(`api/todos/${id}`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json'
@@ -161,7 +161,7 @@ export default function App() {
 
   const clearAllTodos = async () => {
     try {
-      const response = await fetch(`${import.meta.env.BASE_URL}api/todos/clear-all`, {
+      const response = await fetch('api/todos/clear-all', {
         method: 'DELETE',
       });
 
